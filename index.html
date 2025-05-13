@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guisinn | Links</title>    
+  <link rel="shortcut icon" href="raio.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <main class="card">
+    <img src="levisuit.jpeg" alt="Foto de perfil" class="avatar" />
+    <h1>Guisinn</h1>
+    <p class="bio">Dev Front-End Junior que não tem nada para fazer.</p>
+
+    <div class="links">
+        <a href="https://github.com/GuisinnHD" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://discord.gg/jXHZXudh" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+        <a href="https://guisinnhd.github.io/bio/"><i class="fas fa-globe"></i> Portfólio</a>
+    </div>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    }
+
+    // Salvar o tema no localStorage e aplicar ao carregar a página
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light');
+    }
+  </script>
+</body>
+</html>
